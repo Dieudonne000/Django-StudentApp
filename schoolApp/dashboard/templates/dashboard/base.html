@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ school_name }}</title>
+    <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}">
+    
 </head>
 <body>
     {% include 'dashboard/navbar.html' %}
-    <h1>Welcome to {{ school_name }}</h1>
-    <hr>
-    {% block content %}{% endblock %}
+
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">Welcome to {{ school_name }}</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
 </body>
 </html>
