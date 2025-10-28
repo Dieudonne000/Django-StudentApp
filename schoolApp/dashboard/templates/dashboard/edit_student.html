@@ -1,0 +1,14 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<h2>Edit Student</h2>
+<form method="POST">
+    {% csrf_token %}
+    <label>Name:</label><br>
+    <input type="text" name="name" value="{{ student.name }}"><br><br>
+    <label>Age:</label><br>
+    <input type="number" name="age" value="{{ student.age }}"><br><br>
+    <label>Grade:</label><br>
+    <input type="text" name="grade" value="{{ student.grade }}"><br><br>
+    <button type="submit">Update</button>
+</form>
+{% endblock %}

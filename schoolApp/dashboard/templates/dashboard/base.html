@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ school_name }}</title>
+</head>
+<body>
+    {% include 'dashboard/navbar.html' %}
+    <h1>Welcome to {{ school_name }}</h1>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
